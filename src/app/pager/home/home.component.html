@@ -1,0 +1,29 @@
+<p>soy el componente home</p>
+<br>
+<p>mi nombre es {{ nombre}}</p>
+<br>
+<p>mi edad es {{ edad}}</p>
+<br>    
+<p>datos persona:{{persona.nombre}}</p>
+<br>
+<p>datos persona: {{persona.edad}}</p>
+<br>
+<p>datos persona: {{persona.direccion}}</p>
+<br>   
+<label for="">cambiando mi nombre: </label> 
+<input type="text"[(ngModel)]="nombre">
+<button (click)="cambiandoEdad()">enviar</button>
+<br>    
+<p>Mi nuevo nombre es: {{nombre}}</p>
+<p>Mi nuevo nombre es: {{edad}}</p>
+@if (edad < 25) {
+    <h3>no quiero pasar a los tiseis</h3>
+}@else {
+    <h3>va tocar</h3>
+}
+<li>
+    @for (frutas of frutas; track $index) {
+    <ul>{{frutas}}</ul>
+    }
+</li>
+
